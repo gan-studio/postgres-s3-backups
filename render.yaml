@@ -1,7 +1,7 @@
 services:
   - name: backup-db
     type: cron
-    schedule: "30 6 * * *"
+    schedule: "00 3 * * *"
     region: singapore
     env: docker
     plan: standard
