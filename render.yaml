@@ -8,9 +8,9 @@ services:
     dockerfilePath: ./Dockerfile
     autoDeploy: false
     envVars:
-      - key: DATABASE_URL
+      - key: DATABASE_URLd
         fromDatabase:
-          name: PersonalizationEnterpriseBackEndDev
+          name: PersonalizationEnterpriseBackEnd
           property: connectionString
       # pick the region closest to your database
       # For example, us-west-2 for the Oregon region
