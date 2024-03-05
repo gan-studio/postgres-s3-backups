@@ -9,7 +9,9 @@ services:
     autoDeploy: false
     envVars:
       - key: DATABASE_URL
-        sync: false
+        fromDatabase:
+          name: PersonalizationEnterpriseBackEndDev
+          property: connectionString
       # pick the region closest to your database
       # For example, us-west-2 for the Oregon region
       - key: AWS_REGION
