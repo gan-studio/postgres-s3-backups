@@ -1,10 +1,10 @@
-# Deploy a Cron Job to Backup PostgreSQL to Amazon S3
+# Build a container that takes pg_dump and uploads to s3
 
-This repo can be used to deploy a [Cron Job](https://render.com/docs/cronjobs) on [Render](https://render.com) to backup a PostgreSQL instance to Amazon S3.
+The push_to_ecr script builds a docker container that takes a dump of a POSTGRESQL instance, zips it, and uploads it to s3.
 
-Fork this repo and click the button below to deploy.
+The container needs 3 environment variables: 
+1. S3_BUCKET_NAME - the bucket where we upload the backup to
+2. AWS_REGION - the region of the bucket
+3. DATABASE_URL - the complete url of the database of the form (postgres://username:password@host-address/database)
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
-
-See the guide at https://render.com/docs/backup-postgresql-to-s3 for more information.
 
